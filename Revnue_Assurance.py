@@ -1,4 +1,4 @@
-
+pip install streamlit
 import streamlit as st
 from io import StringIO
 import pandas as pd
