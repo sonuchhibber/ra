@@ -27,5 +27,10 @@ def highlight(x):
 
 b=new.style.apply(highlight)
 st.write(new)
-st.download_button("Download",on_click=b.to_excel('test.xlsx'))
+@st.cache
+def convert_df(df):
+    return df.to_csv().encode('utf-8')
+
+csv=convert_df(new)
+st.download_button("Download",data=csv,on_click='test.csv',mime='text/csv')
 
