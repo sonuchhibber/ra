@@ -1,2 +1,5 @@
 pip
--m pip install openpyxl
+openpyxl
+streamlit
+pandas
+python
