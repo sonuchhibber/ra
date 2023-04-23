@@ -33,4 +33,9 @@ def convert_df(df):
 
 csv=convert_df(new)
 st.download_button("Download",data=csv,on_click='test.csv',mime='text/csv')
-
+with open("test.xlsx", "w") as file:
+    btn = st.download_button(
+            label="Download Excel",
+            data=b,
+            file_name="test.xlsx"
+    )
